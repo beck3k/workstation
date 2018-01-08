@@ -1,0 +1,164 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.noselect {
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.topbar {
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	padding: 0 1% 0 1%;
+	background-color: #1A1A1A;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.topbar-text {
+	display: table-cell;
+	height: inherit;
+	vertical-align: middle;
+	font-size: 120%;
+	font-family: Arial, Helvitca, sans-serif;
+	color: #E6E6E6;
+}
+
+.maincontent {
+	padding: 75px 2% 0 2%;
+}
+
+.btn {
+	display: inline-block;
+	border-radius: 3px;
+	text-decoration: none;
+	margin: 2px;
+	padding: 7px 10px 7px 10px;
+	cursor: pointer;
+	font-family: Arial, Helvitca, sans-serif;
+	
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn:hover, .btn:focus {
+	box-shadow: 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-normal {
+	color: #1C1C1C;
+	background-color: #E3E3E3;
+	border: 2px solid rgba(0, 0, 0, 0.04);
+}
+
+.btn-normal:active {
+	background-color: #D9D9D9;
+}
+
+.btn-suggest {
+	color: #FEFEFE;
+	background-color: #428ED7;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-suggest:active {
+	background-color: #3F87CC;
+}
+
+.btn-danger {
+	color: #FFF;
+	background-color: #D90F0F;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.btn-danger:active {
+	background-color: #CF0E0E;
+}
+
+.btn-add {
+	color: #FEFEFE;
+	background-color: #098809;
+	border: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.btn-add:active {
+	background-color: #087D08;
+}
+
+.btn-warning {
+	color: #111;
+	background-color: #FFD512;
+	border: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.btn-warning:active {
+	background-color: #F5CC11;
+}
+
+.btn-info {
+	color: #111;
+	background-color: #61ECEF;
+	border: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.btn-info:active {
+	background-color: #5DE3E6;
+}
+
+.btn-revert {
+	color: #FEFEFE;
+	background-color: #8B3099;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.btn-revert:active {
+	background-color: #822D8F;
+}
+
+.sym-back::before {
+	font-weight: bold;
+	font-family: Arial, Helvitca, sans-serif;
+	content: "\2039  ";
+}
+
+.sym-next::after {
+	font-weight: bold;
+	font-family: Arial, Helvitca, sans-serif;
+	content: " \203A";
+}
+
+.sym-del::before {
+	font-weight: bold;
+	font-family: Arial, Helvitca, sans-serif;
+	content: "\2716  ";
+}
+
+.sym-add::before {
+	font-weight: bold;
+	font-family: Arial, Helvitca, sans-serif;
+	content: "+ ";
+}
+
+.sym-warning::after {
+	font-weight: bold;
+	font-family: Arial, Helvitca, sans-serif;
+	content: " !";
+}
+
+.sym-info::before {
+	font-weight: bold;
+	font-family: monospace;
+	content: "i ";
+}
+
+.sym-revert::before {
+	font-weight: bold;
+	font-family: Arial, Helvitca, sans-serif;
+	content: "\21BA  ";
+}
