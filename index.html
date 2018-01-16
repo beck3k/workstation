@@ -21,7 +21,7 @@
 				<button class="btn btn-danger" onclick="build()">Build</button>
 			</div>
 		</nav>
-		<div class="modal fade" tabindex="-1" role="dialog" id="errorModal" aria-labelledby="errorModalLabel" aria-hidden="true">
+		<div class="modal fade" data-keyboard="true" tabindex="-1" role="dialog" id="errorModal" aria-labelledby="errorModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -36,44 +36,6 @@
 				</div>
 			</div>
 		</div>
-		<script>
-			var platform = "Ubuntu";
-			var exec = require('child_process').exec;
-			var terminal;
-			const remote = require('electron').remote;
-			function errorFunc(error){
-				/*var window = remote.getCurrentWindow();
-				window.close();*/
-				$('#errorModal').find('.modal-body').text(error);
-				$('#errorModal').modal('toggle');
-			}
-			function getTerminal(){				
-				if(platform == "Ubuntu"){
-						exec('xterm -e exit', function callback(error, stdout, stderr) {
-							if(error == null){
-								terminal = 'xterm';
-							}else{
-								errorFunc('xterm');
-							}
-						});
-				}
-			}
-			function checkCommand(cmd, message) {
-				exec(cmd, function callback(error, stdout, stderr) {
-					if(stderr != '') {
-						errorFunc(message);
-					}
-				});
-			}
-			getTerminal();
-			function build(){
-				if(platform == "Ubuntu"){
-					checkCommand('git version', 'Git is required');
-					checkCommand(terminal + ' -e "./build_minetest.sh -clone; ./build_minetest.sh -build"', 'Build Failed!');
-				} else {
-					errorFunc('Sorry, your platform does not support autobuilding');
-				}
-			}
-		</script>
+		<script src="js.js"></script>
 	</body>
 </html>
