@@ -4,10 +4,20 @@
   "description": "GUI for GIT projects",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev": "./node_modules/.bin/webpack & electron ."
   },
   "repository": "https://github.com/beck3k/workstation.git",
   "devDependencies": {
-    "electron": "~1.7.8"
+    "electron": "~1.7.8",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.2.0",
+    "webpack": "^3.10.0"
   }
 }
